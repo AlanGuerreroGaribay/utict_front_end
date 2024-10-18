@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Aplicación de Búsqueda de Zip Codes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto depende de una aplicacion **back-end** hecho con **Node.js y Express**, la app de este repositorio es un **front-end** hecho con **React (Vite)** y **TypeScript**. La aplicación permite buscar ciudades y estados según el código postal, usando la API Zippopotam.
 
-Currently, two official plugins are available:
+## Requisitos previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-## Expanding the ESLint configuration
+- **Node.js** (versión 18 o superior)
+- **npm** (normalmente se incluye con Node.js)
+- **Git** (opcional, en caso de clonar el repositorio)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalación
 
-- Configure the top-level `parserOptions` property like this:
+Sigue los siguientes pasos para configurar el proyecto en tu entorno local.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clona este repositorio en tu máquina local:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+    git clone https://github.com/usuario/proyecto-zipcodes.git
+
+   ```
+
+2. Accede al directorio del proyecto:
+   cd {ruta del repositorio}
+
+3. En la raiz de proyecto deberás crear un archivo **.env** en el cual agregarás las siguientes lineas de código:
+   VITE_API_URL="http://localhost:3000/zipcode/"
+
+4. Una vez en la carpeta del proyecto instala los modulos de node:
+   npm install
+
+## Configuración
+
+Antes de correr esta aplicación, es necesario descargar la aplicacion back-end y seguir los pasos que vienen en el readme correspondiente para instalar y levantar el servicio en back.
+
+## Scripts
+
+Para compilar el proyecto y generar los archivos JavaScript en la carpeta dist, utiliza:
+
+    npm run build
+
+Una vez que hayas compilado el proyecto, puedes iniciar el servidor ejecutando:
+
+    npm start
+
+Para trabajar en modo desarrollo:
+
+    npm run dev
+
+Este proyecto incluye pruebas con Jest. Para ejecutarlas, usa el siguiente comando:
+
+    npm test
